@@ -8,7 +8,7 @@
     "build": "node_modules/babel/bin/babel.js src --source-maps --out-dir dist",
     "start": "node_modules/nodemon/bin/nodemon.js -- node_modules/babel/bin/babel-node.js src/server.js"
   },
-  "author": "",
+  "author": "shuttleql",
   "license": "ISC",
   "dependencies": {
     "express": "4.13.3"
@@ -16,5 +16,8 @@
   "devDependencies": {
     "babel": "5.8.29",
     "nodemon": "1.8.0"
+  },
+  "engines": {
+    "node": "6.6.0"
   }
 }
