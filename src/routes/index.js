@@ -1,4 +1,5 @@
 import express from 'express';
+import Socket from '../socket';
 import config from '../config';
 
 const router = express.Router();
@@ -14,6 +15,10 @@ router.post('/adminNotifications', authenticateSns, (req, res, next) => {
 
   console.log({
     subject, message, timestamp
+  });
+
+  Socket.emit(subject, {
+    resource: message.resource
   });
 
   res.status(200).end();

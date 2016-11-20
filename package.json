@@ -13,7 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "4.13.3"
+    "cors": "^2.8.1",
+    "express": "4.13.3",
+    "socket.io": "^1.5.1"
   },
   "devDependencies": {
     "babel": "5.8.29",
