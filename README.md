@@ -4,6 +4,15 @@
 
 `npm install`
 
+### Config
+
+Some environment variables must be set. See `src/config.js`.
+
+```
+TOPIC_ARN
+SUBSCRIPTION_ARN
+```
+
 ### Developing
 
 This will start the server with babel-node and nodemon.
