@@ -33,9 +33,17 @@ router.post('/adminNotifications', authenticateSns, function (req, res, next) {
     subject: subject, message: message, timestamp: timestamp
   });
 
-  _socket2['default'].emit(subject, {
-    resource: message.resource
-  });
+  switch (subject) {
+    case 'update':
+      _socket2['default'].emit(subject, {
+        resource: message.resource
+      });
+      break;
+    case 'announcement':
+      _socket2['default'].emit(subject, {
+        message: message.message
+      });
+  }
 
   res.status(200).end();
 });
